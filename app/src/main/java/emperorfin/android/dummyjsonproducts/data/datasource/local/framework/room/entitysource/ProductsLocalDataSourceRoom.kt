@@ -67,11 +67,9 @@ data class ProductsLocalDataSourceRoom @Inject internal constructor(
         when(params){
             is None -> {
                 return@withContext try {
-                    val entityProducts: List<ProductEntity> = productDao.getProducts() as List<ProductEntity>
+                    val entityProducts: List<ProductEntity> = productDao.getProducts()
 
-                    if (entityProducts == null) // Deliberate check but shouldn't do this
-                        return@withContext ResultData.Error(failure = ProductFailure.ProductLocalError())
-                    else if (entityProducts.isEmpty())
+                    if (entityProducts.isEmpty())
                         return@withContext ResultData.Error(failure = ProductFailure.ProductListNotAvailableLocalError())
 
                     val modelProducts = entityProducts.map {
@@ -95,7 +93,6 @@ data class ProductsLocalDataSourceRoom @Inject internal constructor(
                         searchQuery = params.description
                     }
 
-//                    val entityProducts: List<ProductEntity> = productDao.getProducts(params.title!!) as List<ProductEntity>
                     val entityProducts: List<ProductEntity> = if (searchQuery.isNotEmpty()) {
                         productDao.getProducts(searchQuery)
                     } else {
@@ -128,10 +125,7 @@ data class ProductsLocalDataSourceRoom @Inject internal constructor(
             is ProductParams -> {
                 return@withContext try {
 
-                    val entityProduct: ProductEntity = productDao.getProduct(params.id.toString()) as ProductEntity
-
-//                    if (entityProduct == null)
-//                        return@withContext ResultData.Error(failure = ProductFailure.ProductLocalError())
+                    val entityProduct: ProductEntity = productDao.getProduct(params.id.toString())
 
                     val modelProduct = productModelMapper.transform(entityProduct)
 

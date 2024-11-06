@@ -181,7 +181,6 @@ data class ProductsViewModel @Inject constructor(
             _newProductsLength.value = productsNew.size
             _totalRetrievedProductsLength.value += productsNew.size
 
-//            _products.value = ResultData.Success(data = productsUiModel)
             _productsOld.value = ResultData.Success(data = productsNew)
             _products.value = ResultData.Success(data = productsNew)
 

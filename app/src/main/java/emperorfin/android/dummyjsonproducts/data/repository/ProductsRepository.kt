@@ -53,7 +53,7 @@ data class ProductsRepository @Inject constructor(
             }
 
             (newProducts as? ResultData.Success)?.let {
-                if (it.data.isNotEmpty()) { // it.data.isEmpty()
+                if (it.data.isNotEmpty()) {
                     return@withContext ResultData.Success(it.data)
                 } else {
                     // TODO: Note new impl line addition
@@ -63,8 +63,6 @@ data class ProductsRepository @Inject constructor(
                 }
             }
 
-            // TODO: Check to be sure newProducts isn't a type other than ResultData.Error.
-            //      If it is, return an explicit ResultData.Error objet.
             return@withContext newProducts as ResultData.Error
         }
     }

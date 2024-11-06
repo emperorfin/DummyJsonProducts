@@ -56,7 +56,6 @@ data class ProductsRemoteDataSourceRetrofit @Inject internal constructor(
                                 val productsModel: List<ProductModel> =
                                     buildProductModelList(response = it)
 
-                                // try block doesn't seem to return without return@withContext
                                 return@withContext ResultData.Success(productsModel)
                             }
                         }
@@ -92,7 +91,6 @@ data class ProductsRemoteDataSourceRetrofit @Inject internal constructor(
 
                                 val movieModel: ProductModel = buildProductModel(product = it)
 
-                                // try block doesn't seem to return without return@withContext
                                 return@withContext ResultData.Success(movieModel)
                             }
                         }
