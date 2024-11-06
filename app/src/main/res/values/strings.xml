@@ -1,3 +1,34 @@
 <resources>
     <string name="app_name">Dummy Json Products</string>
+
+    <string name="error_memory_product_list_not_available">Product list not available memory error.</string>
+    <string name="error_local_product_list_not_available">Product list not available local error.</string>
+    <string name="error_remote_product_list_not_available">Product list not available remote error.</string>
+    <string name="error_memory_product">Product memory error.</string>
+    <string name="error_local_product">Product local error.</string>
+    <string name="error_remote_product">Product remote error.</string>
+    <string name="error_memory_get_product">Get product memory error.</string>
+    <string name="error_local_get_product">Get product local error.</string>
+    <string name="error_remote_get_product">Get product remote error.</string>
+    <string name="error_memory_insert_product">Insert product memory error.</string>
+    <string name="error_local_insert_product">Insert product local error.</string>
+    <string name="error_remote_insert_product">Insert product remote error.</string>
+    <string name="error_memory_update_product">Update product memory error.</string>
+    <string name="error_local_update_product">Update product local error.</string>
+    <string name="error_remote_update_product">Update product remote error.</string>
+    <string name="error_memory_delete_product">Delete product memory error.</string>
+    <string name="error_local_delete_product">Delete product local error.</string>
+    <string name="error_remote_delete_product">Delete product remote error.</string>
+    <string name="error_memory_non_existent_product_data">Non existent product data memory error.</string>
+    <string name="error_local_non_existent_product_data">Non existent product data local error.</string>
+    <string name="error_remote_non_existent_product_data">Non existent product data remote error.</string>
+    <string name="error_repository_get_product">Get product repository error.</string>
+    <string name="error_repository_insert_product">Insert product repository error.</string>
+    <string name="error_repository_delete_product">Delete product repository error.</string>
+    <string name="error_cant_force_refresh_products_remote_data_source_unavailable">Can\'t force products refresh. Remote data source is unavailable.</string>
+    <string name="error_repository_product_list_not_available">User list not available repository error.</string>
+    <string name="error_fetching_from_remote_and_local">Error fetching from remote and local.</string>
+
+    <string name="exception_occurred_remote">Remote exception occurred.</string>
+    <string name="exception_occurred_local">Local exception occurred.</string>
 </resources>
