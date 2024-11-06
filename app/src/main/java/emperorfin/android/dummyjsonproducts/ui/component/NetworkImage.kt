@@ -10,6 +10,7 @@ import androidx.compose.ui.text.style.TextAlign
 import com.skydoves.landscapist.CircularReveal
 import com.skydoves.landscapist.ShimmerParams
 import com.skydoves.landscapist.coil.CoilImage
+import com.skydoves.landscapist.coil.CoilImageState
 import com.skydoves.landscapist.palette.BitmapPalette
 import emperorfin.android.dummyjsonproducts.ui.theme.shimmerHighLight
 
@@ -45,11 +46,11 @@ fun NetworkImage(
                 Text(
                     text = "image request failed.",
                     textAlign = TextAlign.Center,
-//                    style = MaterialTheme.typography.body2,
                     style = MaterialTheme.typography.bodyMedium,
                     modifier = Modifier.fillMaxSize()
                 )
-            }
+            },
+            loading = { LoadingIndicator() }
         )
     } else {
         CoilImage(
@@ -63,7 +64,6 @@ fun NetworkImage(
                 Text(
                     text = "image request failed.",
                     textAlign = TextAlign.Center,
-//                    style = MaterialTheme.typography.body2,
                     style = MaterialTheme.typography.bodyMedium,
                     modifier = Modifier.fillMaxSize()
                 )

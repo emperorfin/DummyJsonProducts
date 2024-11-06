@@ -3,6 +3,7 @@
 
     <string name="content_description_error_message">Error message</string>
     <string name="btn_retry">Retry</string>
+    <string name="description">Description</string>
 
     <string name="error_memory_product_list_not_available">Product list not available memory error.</string>
     <string name="error_local_product_list_not_available">Product list not available local error.</string>

@@ -17,6 +17,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import emperorfin.android.dummyjsonproducts.ui.theme.Purple40
@@ -39,7 +40,9 @@ fun AppBar(
                     text = title ?: "",
                     color = Color.White,
                     fontSize = 18.sp,
-                    fontWeight = FontWeight.Bold
+                    fontWeight = FontWeight.Bold,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
                 )
             }
         },
@@ -53,9 +56,6 @@ fun AppBar(
                             contentDescription = null,
                             modifier = Modifier
                                 .align(Alignment.TopCenter)
-//                            .clickable {
-//                                it()
-//                            }
                         )
                     }
                 }

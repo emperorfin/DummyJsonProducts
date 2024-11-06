@@ -15,12 +15,12 @@ import com.google.accompanist.insets.ProvideWindowInsets
 import emperorfin.android.dummyjsonproducts.ui.navigation.Destinations.ROUTE_PRODUCTS
 import emperorfin.android.dummyjsonproducts.ui.navigation.Destinations.ROUTE_PRODUCT_DETAILS
 import emperorfin.android.dummyjsonproducts.ui.navigation.ScreenArgs.SCREEN_PRODUCT_DETAILS_PRODUCT_ID
+import emperorfin.android.dummyjsonproducts.ui.screen.productdetails.ProductDetailsScreen
 import emperorfin.android.dummyjsonproducts.ui.screen.products.ProductsScreen
 
 
 @Composable
 fun NavGraph(
-    context: Context = LocalContext.current,
     modifier: Modifier = Modifier,
     navController: NavHostController = rememberNavController(),
     startDestination: String = ROUTE_PRODUCTS,
@@ -51,10 +51,10 @@ fun NavGraph(
 
                 val productId: String = backStackEntry.arguments?.getString(SCREEN_PRODUCT_DETAILS_PRODUCT_ID)!!
 
-//                ProductDetailsScreen(
-//                    navigationActions = navActions,
-//                    productId = productId,
-//                )
+                ProductDetailsScreen(
+                    navigationActions = navActions,
+                    productId = productId,
+                )
             }
         }
     }
