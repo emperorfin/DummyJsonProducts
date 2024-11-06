@@ -85,19 +85,10 @@ object DatabaseModule {
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
 
-//    @Provides
-//    @Singleton
-//    fun provideOkHttpClient(): OkHttpClient {
-//        return OkHttpClient.Builder()
-//            .addInterceptor(RequestInterceptor())
-//            .build()
-//    }
-
     @Provides
     @Singleton
-    fun provideRetrofit(okhHttpClient: OkHttpClient): Retrofit {
+    fun provideRetrofit(): Retrofit {
         return Retrofit.Builder()
-//            .client(okhHttpClient)
             .baseUrl(BuildConfig.DUMMY_JSON_BASE_URL)
 //            .addConverterFactory(MoshiConverterFactory.create())
             .addConverterFactory(GsonConverterFactory.create())

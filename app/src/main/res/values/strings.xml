@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">Dummy Json Products</string>
 
+    <string name="content_description_error_message">Error message</string>
+    <string name="btn_retry">Retry</string>
+
     <string name="error_memory_product_list_not_available">Product list not available memory error.</string>
     <string name="error_local_product_list_not_available">Product list not available local error.</string>
     <string name="error_remote_product_list_not_available">Product list not available remote error.</string>
@@ -31,4 +34,9 @@
 
     <string name="exception_occurred_remote">Remote exception occurred.</string>
     <string name="exception_occurred_local">Local exception occurred.</string>
+
+    <string name="message_max_num_of_products_retrieved">Maximum number of products retrieved.</string>
+    <string name="message_no_internet_loading_cached_products">No internet connectivity. Loading saved products…</string>
+    <string name="message_no_internet_searching_cached_products">No internet connectivity. Searching saved products…</string>
+    <string name="message_no_internet_connectivity">No internet connectivity.</string>
 </resources>
